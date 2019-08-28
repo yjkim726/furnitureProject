@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.yj.board.dao.IDao" >
+	<select id="list" resultType="com.yj.board.dto.bDto">
+		select bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent from mvc_board order by bGroup desc, bStep asc
+	</select>
+	
+	<select id="furniturelist" resultType="com.yj.board.dto.FurnitureDto">
+		select fnt_id, fnt_name, kinds, colors, site, heights, horizontal, vertical, 3dfile from furniture	
+	</select>
+	
+
+
+</mapper>
