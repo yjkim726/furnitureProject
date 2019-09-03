@@ -2,8 +2,8 @@ package com.yj.board.dto;
 
 public class MeasureDto {
 	
-	int mearsure_id;
-	String mearsure_name;
+	int measure_id;
+	String measure_name;
 	String heights;
 	String horizontal;
 	String vertical;
@@ -12,20 +12,20 @@ public class MeasureDto {
 	String member_id;
 	
 	
-	public int getMearsure_id() {
-		return mearsure_id;
+	public int getMeasure_id() {
+		return measure_id;
 	}
-	public void setMearsure_id(int mearsure_id) {
-		this.mearsure_id = mearsure_id;
-	}
-	
-	public String getMearsure_name() {
-		return mearsure_name;
-	}
-	public void setMearsure_name(String mearsure_name) {
-		this.mearsure_name = mearsure_name;
+	public void setMeasure_id(int measure_id) {
+		this.measure_id = measure_id;
 	}
 	
+
+	public String getMeasure_name() {
+		return measure_name;
+	}
+	public void setMeasure_name(String measure_name) {
+		this.measure_name = measure_name;
+	}
 	public String getHeights() {
 		return heights;
 	}

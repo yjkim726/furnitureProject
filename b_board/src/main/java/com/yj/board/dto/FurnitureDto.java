@@ -11,6 +11,7 @@ public class FurnitureDto {
 	String horizontal;
 	String vertical;
 	String file3d;
+	String image_path;
 	
 	public int getFnt_id() {
 		return fnt_id;
@@ -74,5 +75,13 @@ public class FurnitureDto {
 	public void setFile3d(String file3d) {
 		this.file3d = file3d;
 	}
+	
+	public String getImage_path() {
+		return image_path;
+	}
+	public void setImage_path(String image_path) {
+		this.image_path = image_path;
+	}
 	 
+	
 }

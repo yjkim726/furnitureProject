@@ -9,9 +9,24 @@
 	</select>
 	
 	<select id="furniturelist" resultType="com.yj.board.dto.FurnitureDto">
-		select fnt_id, fnt_name, kinds, colors, site, heights, horizontal, vertical, 3dfile from furniture	
+		select fnt_id, fnt_name, kinds, colors, site, heights, horizontal, vertical, 3dfile, image_path from furniture	
 	</select>
 	
+	<select id="checkFurnitureList"  parameterType="list" resultType="com.yj.board.dto.FurnitureDto">
+		select fnt_id, fnt_name, kinds, colors, site, heights, horizontal, vertical, 3dfile, image_path 
+		from furniture
+		where kinds in 
+		<foreach collection="array" item="memIdx" index="index" open="(" separator="," close=")">
+       #{memIdx}
+       </foreach> 
 
 
+	</select>
+	
+	<select id="measurelist"  parameterType="string" resultType="com.yj.board.dto.MeasureDto">
+		select * 
+		from measure
+		where member_id=#{param1}
+	</select>
+	
 </mapper>
